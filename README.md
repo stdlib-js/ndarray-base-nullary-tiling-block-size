@@ -41,6 +41,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import nullaryBlockSize from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-tiling-block-size@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-base-nullary-tiling-block-size/tags). For example,
+
+```javascript
 import nullaryBlockSize from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-tiling-block-size@v0.0.1-esm/index.mjs';
 ```
 
@@ -84,7 +89,7 @@ var bsize = nullaryBlockSize( 'float64' );
 <script type="module">
 
 import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import nullaryBlockSize from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-tiling-block-size@v0.0.1-esm/index.mjs';
+import nullaryBlockSize from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-tiling-block-size@esm/index.mjs';
 
 // Get the list of ndarray dtypes:
 var dt = dtypes();
