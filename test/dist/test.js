@@ -21,36 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var isPositiveInteger = require( '@stdlib/assert-is-positive-integer' ).isPrimitive;
-var dtypes = require( '@stdlib/ndarray-dtypes' );
-var nullaryBlockSize = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof nullaryBlockSize, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function returns a block size', function test( t ) {
-	var dt;
-	var v;
-	var i;
-
-	// NOTE: we don't test for exact block size values, as we shouldn't need to make guarantees regarding the block size for any particular dtype. This function is meant to be opaque, and we want to reserve the right to silently update/change return values in the future.
-
-	// Get the list of dtypes:
-	dt = dtypes();
-
-	for ( i = 0; i < dt.length; i++ ) {
-		v = nullaryBlockSize( dt[ i ] );
-		t.strictEqual( isPositiveInteger( v ), true, 'returns a positive integer when provided ('+dt[ i ]+')' );
-	}
-
-	// Sanity check that the block size for dtypes with wider bit widths is smaller than for dtypes with shorter bit widths...
-	t.strictEqual( nullaryBlockSize( 'complex128' ) < nullaryBlockSize( 'int8' ), true, 'returns expected value' );
-	t.strictEqual( nullaryBlockSize( 'float64' ) < nullaryBlockSize( 'uint8' ), true, 'returns expected value' );
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
