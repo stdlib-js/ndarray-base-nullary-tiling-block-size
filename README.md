@@ -45,30 +45,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/ndarray-base-nullary-tiling-block-size
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var nullaryBlockSize = require( '@stdlib/ndarray-base-nullary-tiling-block-size' );
+nullaryBlockSize = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-tiling-block-size@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var nullaryBlockSize = require( 'path/to/vendor/umd/ndarray-base-nullary-tiling-block-size/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-tiling-block-size@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.nullaryBlockSize;
+})();
+</script>
 ```
 
 #### nullaryBlockSize( dtypeX )
@@ -104,9 +112,14 @@ var bsize = nullaryBlockSize( 'float64' );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var dtypes = require( '@stdlib/ndarray-dtypes' );
-var nullaryBlockSize = require( '@stdlib/ndarray-base-nullary-tiling-block-size' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-tiling-block-size@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 // Get the list of ndarray dtypes:
 var dt = dtypes();
@@ -119,6 +132,11 @@ for ( i = 0; i < dt.length; i++ ) {
     b = nullaryBlockSize( dt[ i ] );
     console.log( '%d, %s', b, dt[ i ] );
 }
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -210,7 +228,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-nullary-tiling-block-size/main/LICENSE
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes/tree/umd
 
 </section>
 
