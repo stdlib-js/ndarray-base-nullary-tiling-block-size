@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import nullaryBlockSize from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-tiling-block-size@esm/index.mjs';
+import nullaryBlockSize from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-tiling-block-size@v0.2.1-esm/index.mjs';
 ```
 
 #### nullaryBlockSize( dtypeX )
@@ -95,7 +95,7 @@ var bsize = nullaryBlockSize( 'float64' );
 <script type="module">
 
 import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import nullaryBlockSize from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-tiling-block-size@esm/index.mjs';
+import nullaryBlockSize from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-tiling-block-size@v0.2.1-esm/index.mjs';
 
 // Get the list of ndarray dtypes:
 var dt = dtypes();
