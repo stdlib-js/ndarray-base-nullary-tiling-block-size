@@ -108,19 +108,15 @@ var bsize = nullaryBlockSize( 'float64' );
 
 ```javascript
 var dtypes = require( '@stdlib/ndarray-dtypes' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
 var nullaryBlockSize = require( '@stdlib/ndarray-base-nullary-tiling-block-size' );
 
 // Get the list of ndarray dtypes:
 var dt = dtypes();
 
-// Resolve the block size for each dtype...
-var b;
-var i;
-console.log( 'block_size, xdtype' );
-for ( i = 0; i < dt.length; i++ ) {
-    b = nullaryBlockSize( dt[ i ] );
-    console.log( '%d, %s', b, dt[ i ] );
-}
+// Resolve the block size for each dtype:
+console.log( 'xdtype, block_size' );
+logEachMap( '%s, %d', dt, nullaryBlockSize );
 ```
 
 </section>
@@ -169,7 +165,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 </section>
 

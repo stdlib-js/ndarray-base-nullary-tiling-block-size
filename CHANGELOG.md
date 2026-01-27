@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-29)
+## Unreleased (2026-01-27)
 
 <section class="commits">
 
@@ -12,6 +12,8 @@
 
 <details>
 
+-   [`46c8d0e`](https://github.com/stdlib-js/stdlib/commit/46c8d0eb953a8bd39e4486a93d65aca6c45af934) - **docs:** fix examples _(by Athan Reines)_
+-   [`45ee3d6`](https://github.com/stdlib-js/stdlib/commit/45ee3d69be75dcd538d8fde2f2b23ac100995c4b) - **refactor:** use generalized utility _(by Athan Reines)_
 -   [`374beff`](https://github.com/stdlib-js/stdlib/commit/374beff1f47c81bea4dd825d3b25ce405c2f9375) - **docs:** update dtype type _(by Athan Reines)_
 
 </details>
