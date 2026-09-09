@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2023 The Stdlib Authors.
@@ -16,25 +16,25 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { DataType } from '@stdlib/types/ndarray';
 
 /**
-* Resolve a loop block size for multi-dimensional array tiled loops.
+* Returns a loop block size for multi-dimensional array tiled loops.
 *
-* @module @stdlib/ndarray-base-nullary-tiling-block-size
+* @param dtypeX - array data type
+* @returns block size (in units of elements)
 *
 * @example
-* var nullaryBlockSize = require( '@stdlib/ndarray-base-nullary-tiling-block-size' );
-*
 * var bsize = nullaryBlockSize( 'float64' );
 * // returns <number>
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function nullaryBlockSize( dtypeX: DataType ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = nullaryBlockSize;
