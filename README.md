@@ -45,32 +45,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/ndarray-base-nullary-tiling-block-size
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var nullaryBlockSize = require( '@stdlib/ndarray-base-nullary-tiling-block-size' );
+import nullaryBlockSize from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-tiling-block-size@esm/index.mjs';
 ```
 
 #### nullaryBlockSize( dtypeX )
@@ -106,10 +88,15 @@ var bsize = nullaryBlockSize( 'float64' );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var dtypes = require( '@stdlib/ndarray-dtypes' );
-var logEachMap = require( '@stdlib/console-log-each-map' );
-var nullaryBlockSize = require( '@stdlib/ndarray-base-nullary-tiling-block-size' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
+import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
+import nullaryBlockSize from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-tiling-block-size@esm/index.mjs';
 
 // Get the list of ndarray dtypes:
 var dt = dtypes();
@@ -117,6 +104,10 @@ var dt = dtypes();
 // Resolve the block size for each dtype:
 console.log( 'xdtype, block_size' );
 logEachMap( '%s, %d', dt, nullaryBlockSize );
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -148,7 +139,7 @@ logEachMap( '%s, %d', dt, nullaryBlockSize );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -211,7 +202,7 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-nullary-tiling-block-size/main/LICENSE
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes/tree/esm
 
 </section>
 
